@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Midterms_H1_3_Abadilla.Models.Domain
+﻿namespace Midterms_H1_3_Abadilla.Models.Domain
 {
-    public class Transaction : Controller
+    public class Transaction
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public int Id { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
+        public string? CustomerEmail { get; set; }
+        public DateTime TransactionDate { get; set; } = DateTime.Now;
+        public decimal TotalAmount { get; set; }
+        public List<CartItem> Items { get; set; } = new List<CartItem>();
     }
 }
